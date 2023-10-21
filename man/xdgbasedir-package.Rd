@@ -8,6 +8,14 @@
 \description{
 Implementation of the 'X Desktop Group' (XDG) 'Base Directory Specification', which defines base directories under which several common types of files should be stored.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/briandconnelly/xdgbasedir}
+  \item Report bugs at \url{https://github.com/briandconnelly/xdgbasedir/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Brian Connelly \email{bdc@bconnelly.net} (\href{https://orcid.org/0000-0002-9948-0379}{ORCID}) [copyright holder]
 
