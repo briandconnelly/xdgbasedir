@@ -48,6 +48,18 @@ path_xdg_state_home <- function(...) {
 }
 
 
+#' @rdname path_xdg
+#' @description `path_xdg_runtime_dir()` constructs a path beginning at the
+#' directory in which user-specific runtime files and other file objects should
+#' be placed. If `$XDG_RUNTIME_DIR` is not set, `NA` is returned.
+#' @export
+#' @examples
+#' path_xdg_state_home()
+path_xdg_runtime_dir <- function(...) {
+  path_xdg("XDG_RUNTIME_DIR", default = NA, ...)
+}
+
+
 #' @noRd
 path_xdg <- function(envvar, default, ...) {
   fs::path(Sys.getenv(x = envvar, unset = default), ...)

@@ -3,4 +3,5 @@
 export(path_xdg_cache_home)
 export(path_xdg_config_home)
 export(path_xdg_data_home)
+export(path_xdg_runtime_dir)
 export(path_xdg_state_home)

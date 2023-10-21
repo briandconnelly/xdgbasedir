@@ -5,6 +5,7 @@
 \alias{path_xdg_config_home}
 \alias{path_xdg_data_home}
 \alias{path_xdg_state_home}
+\alias{path_xdg_runtime_dir}
 \title{XDG Base Directory Paths}
 \usage{
 path_xdg_cache_home(...)
@@ -14,6 +15,8 @@ path_xdg_config_home(...)
 path_xdg_data_home(...)
 
 path_xdg_state_home(...)
+
+path_xdg_runtime_dir(...)
 }
 \arguments{
 \item{...}{Additional paths appended to the directory by \link[fs:path]{fs::path}}
@@ -36,10 +39,15 @@ directory in which user-specific data files should be stored.
 
 \code{path_xdg_state_home()} constructs a path beginning at the
 directory in which user-specific state files should be stored.
+
+\code{path_xdg_runtime_dir()} constructs a path beginning at the
+directory in which user-specific runtime files and other file objects should
+be placed. If \verb{$XDG_RUNTIME_DIR} is not set, \code{NA} is returned.
 }
 \examples{
 path_xdg_cache_home()
 path_xdg_config_home()
 path_xdg_data_home()
+path_xdg_state_home()
 path_xdg_state_home()
 }
