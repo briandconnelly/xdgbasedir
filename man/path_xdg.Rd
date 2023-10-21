@@ -16,7 +16,7 @@ path_xdg_data_home(...)
 path_xdg_state_home(...)
 }
 \arguments{
-\item{...}{Additional paths appended to the directory by \code{\link[fs:path]{fs::path()}}}
+\item{...}{Additional paths appended to the directory by \link[fs:path]{fs::path}}
 }
 \value{
 A string containing a path

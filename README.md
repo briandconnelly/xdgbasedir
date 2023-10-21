@@ -9,6 +9,9 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/xdgbasedir)](https://CRAN.R-project.org/package=xdgbasedir)
+[![R-CMD-check](https://github.com/briandconnelly/xdgbasedir/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/briandconnelly/xdgbasedir/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/briandconnelly/xdgbasedir/branch/main/graph/badge.svg)](https://app.codecov.io/gh/briandconnelly/xdgbasedir?branch=main)
 <!-- badges: end -->
 
 xdgbasedir is R package that allows you to easily and consistently work
