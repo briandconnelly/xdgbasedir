@@ -17,6 +17,7 @@ path_xdg_cache_home <- function(...) {
   path_xdg("XDG_CACHE_HOME", fs::path_home(".cache"), ...)
 }
 
+
 #' @rdname path_xdg
 #' @description `path_xdg_config_home()` constructs a path beginning at the
 #' directory in which user-specific configuration files should be stored.
@@ -27,6 +28,7 @@ path_xdg_config_home <- function(...) {
   path_xdg("XDG_CONFIG_HOME", fs::path_home(".config"), ...)
 }
 
+
 #' @rdname path_xdg
 #' @description `path_xdg_data_home()` constructs a path beginning at the
 #' directory in which user-specific data files should be stored.
@@ -36,6 +38,7 @@ path_xdg_config_home <- function(...) {
 path_xdg_data_home <- function(...) {
   path_xdg("XDG_DATA_HOME", fs::path_home(".local", "share"), ...)
 }
+
 
 #' @rdname path_xdg
 #' @description `path_xdg_state_home()` constructs a path beginning at the

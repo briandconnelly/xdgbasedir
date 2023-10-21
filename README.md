@@ -14,8 +14,8 @@ status](https://www.r-pkg.org/badges/version/xdgbasedir)](https://CRAN.R-project
 coverage](https://codecov.io/gh/briandconnelly/xdgbasedir/branch/main/graph/badge.svg)](https://app.codecov.io/gh/briandconnelly/xdgbasedir?branch=main)
 <!-- badges: end -->
 
-xdgbasedir is R package that allows you to easily and consistently work
-with paths that comply with the [XDG Base Directory
+xdgbasedir is R package that allows you to work with paths that comply
+with the [XDG Base Directory
 Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html).
 
 ## Installation
