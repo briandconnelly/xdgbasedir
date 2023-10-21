@@ -5,9 +5,7 @@
 \alias{path_xdg_config_home}
 \alias{path_xdg_data_home}
 \alias{path_xdg_state_home}
-\title{XDG Base Directory Paths
-
-These functions allow you to construct paths that adhere to the \href{https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html}{XDG Base Directory Specification}.}
+\title{XDG Base Directory Paths}
 \usage{
 path_xdg_cache_home(...)
 
@@ -18,12 +16,15 @@ path_xdg_data_home(...)
 path_xdg_state_home(...)
 }
 \arguments{
-\item{...}{Additional paths appended to the directory by \link[fs:path]{fs::path}}
+\item{...}{Additional paths appended to the directory by \code{\link[fs:path]{fs::path()}}}
 }
 \value{
 A string containing a path
 }
 \description{
+These functions allow you to construct paths that adhere to the
+\href{https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html}{XDG Base Directory Specification}.?
+
 \code{path_xdg_cache_home()} constructs a path beginning at the
 directory in which user-specific non-essential data files should be stored.
 

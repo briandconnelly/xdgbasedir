@@ -1,7 +1,8 @@
 #' @rdname path_xdg
 #' @title XDG Base Directory Paths
 #'
-#' These functions allow you to construct paths that adhere to the [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html).
+#' @description These functions allow you to construct paths that adhere to the
+#' [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html).?
 #'
 #' @param ... Additional paths appended to the directory by [fs::path]
 #'

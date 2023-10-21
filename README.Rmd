@@ -20,37 +20,25 @@ knitr::opts_chunk$set(
 [![CRAN status](https://www.r-pkg.org/badges/version/xdgbasedir)](https://CRAN.R-project.org/package=xdgbasedir)
 <!-- badges: end -->
 
-The goal of xdgbasedir is to ...
+xdgbasedir is R package that allows you to easily and consistently work with paths that comply with the [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html).
 
 ## Installation
 
 You can install the development version of xdgbasedir like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+# install.packages("remotes")
+remotes::install_github("briandconnelly/xdgbasedir")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Let's say we wanted to read our RStudio Desktop preferences file, `rstudio-prefs.json`.
+Since RStudio [complies](https://docs.posit.co/ide/desktop-pro/settings/settings.html) with the XDG Base Directory Specification, we can easily find that file no matter how the user has configured their environment.
 
-```{r example}
+```{r load rstudio-prefs.json}
 library(xdgbasedir)
-## basic example code
+
+prefs_file <- path_xdg_config_home("rstudio-prefs.json")
+prefs_file
 ```
-
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
