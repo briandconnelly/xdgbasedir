@@ -46,6 +46,11 @@ These functions allow you to get an ordered list of directories:
 | `$XDG_CONFIG_DIRS` | `path_xdg_config_dirs()` |
 | `$XDG_DATA_DIRS`   | `path_xdg_data_dirs()`   |
 
+``` r
+path_xdg_data_dirs()
+#> [1] "/usr/local/share/" "/usr/share/"
+```
+
 ## Installation
 
 You can install the development version of xdgbasedir like so:

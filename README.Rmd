@@ -47,13 +47,17 @@ path_xdg_config_home("myconfig.json")
 ```
 
 
-
 These functions allow you to get an ordered list of directories:
 
 | XDG Variable.      | xbasedir function        |
 |--------------------|--------------------------|
 | `$XDG_CONFIG_DIRS` | `path_xdg_config_dirs()` |
 | `$XDG_DATA_DIRS`   | `path_xdg_data_dirs()`   |
+
+
+```{r datadirs example}
+path_xdg_data_dirs()
+```
 
 
 ## Installation
