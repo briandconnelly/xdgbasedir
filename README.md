@@ -21,7 +21,7 @@ Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-
 These functions allow you to get the value associated with the relevant
 environment variable and to build paths from them:
 
-| XDG Variable       | xbasedir function        |
+| XDG Variable       | xdgbasedir function      |
 |--------------------|--------------------------|
 | `$XDG_CACHE_HOME`  | `path_xdg_cache_home()`  |
 | `$XDG_CONFIG_HOME` | `path_xdg_config_home()` |
@@ -41,7 +41,7 @@ path_xdg_config_home("myconfig.json")
 
 These functions allow you to get an ordered list of directories:
 
-| XDG Variable.      | xbasedir function        |
+| XDG Variable.      | xdgbasedir function      |
 |--------------------|--------------------------|
 | `$XDG_CONFIG_DIRS` | `path_xdg_config_dirs()` |
 | `$XDG_DATA_DIRS`   | `path_xdg_data_dirs()`   |
