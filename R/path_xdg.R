@@ -2,7 +2,9 @@
 #' @title XDG Base Directory Paths
 #'
 #' @description These functions allow you to construct paths that adhere to the
-#' [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html).?
+# nolint start
+#' [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html).
+# nolint end
 #'
 #' @param ... Additional paths appended to the directory by [fs::path]
 #'
@@ -30,6 +32,20 @@ path_xdg_config_home <- function(...) {
 
 
 #' @rdname path_xdg
+#' @description `path_xdg_config_dirs()` returns a list of preference ordered
+#' base directories relative to which configuration files should be searched.
+#' @export
+#' @examples
+#' path_xdg_config_dirs()
+path_xdg_config_dirs <- function() {
+  strsplit(
+    Sys.getenv("XDG_CONFIG_DIRS", unset = "/etc/xdg"),
+    split = ":"
+  )[[1]]
+}
+
+
+#' @rdname path_xdg
 #' @description `path_xdg_data_home()` constructs a path beginning at the
 #' directory in which user-specific data files should be stored.
 #' @export
@@ -37,6 +53,20 @@ path_xdg_config_home <- function(...) {
 #' path_xdg_data_home()
 path_xdg_data_home <- function(...) {
   path_xdg("XDG_DATA_HOME", fs::path_home(".local", "share"), ...)
+}
+
+
+#' @rdname path_xdg
+#' @description `path_xdg_data_dirs()` returns a list of preference-ordered base
+#' directories relative to which data files should be searched.
+#' @export
+#' @examples
+#' path_xdg_data_dirs()
+path_xdg_data_dirs <- function() {
+  strsplit(
+    Sys.getenv("XDG_DATA_DIRS", unset = "/usr/local/share/:/usr/share/"),
+    split = ":"
+  )[[1]]
 }
 
 

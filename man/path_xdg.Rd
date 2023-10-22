@@ -3,7 +3,9 @@
 \name{path_xdg_cache_home}
 \alias{path_xdg_cache_home}
 \alias{path_xdg_config_home}
+\alias{path_xdg_config_dirs}
 \alias{path_xdg_data_home}
+\alias{path_xdg_data_dirs}
 \alias{path_xdg_state_home}
 \alias{path_xdg_runtime_dir}
 \title{XDG Base Directory Paths}
@@ -12,7 +14,11 @@ path_xdg_cache_home(...)
 
 path_xdg_config_home(...)
 
+path_xdg_config_dirs()
+
 path_xdg_data_home(...)
+
+path_xdg_data_dirs()
 
 path_xdg_state_home(...)
 
@@ -26,7 +32,7 @@ A string containing a path
 }
 \description{
 These functions allow you to construct paths that adhere to the
-\href{https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html}{XDG Base Directory Specification}.?
+\href{https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html}{XDG Base Directory Specification}.
 
 \code{path_xdg_cache_home()} constructs a path beginning at the
 directory in which user-specific non-essential data files should be stored.
@@ -34,8 +40,14 @@ directory in which user-specific non-essential data files should be stored.
 \code{path_xdg_config_home()} constructs a path beginning at the
 directory in which user-specific configuration files should be stored.
 
+\code{path_xdg_config_dirs()} returns a list of preference ordered
+base directories relative to which configuration files should be searched.
+
 \code{path_xdg_data_home()} constructs a path beginning at the
 directory in which user-specific data files should be stored.
+
+\code{path_xdg_data_dirs()} returns a list of preference-ordered base
+directories relative to which data files should be searched.
 
 \code{path_xdg_state_home()} constructs a path beginning at the
 directory in which user-specific state files should be stored.
@@ -47,7 +59,9 @@ be placed. If \verb{$XDG_RUNTIME_DIR} is not set, \code{NA} is returned.
 \examples{
 path_xdg_cache_home()
 path_xdg_config_home()
+path_xdg_config_dirs()
 path_xdg_data_home()
+path_xdg_data_dirs()
 path_xdg_state_home()
 path_xdg_state_home()
 }
